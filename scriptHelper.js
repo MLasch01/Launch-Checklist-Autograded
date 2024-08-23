@@ -42,35 +42,6 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         return("Is a Number");
     }
 }
- 
-// function placeholder(){
-//     window.addEventListener("load", function() {
-//         let form = document.querySelector("launchForm");
-//         form.addEventListener("submit", function(event) {
-//         let pilotName = document.querySelector("input[name=pilotName]");
-//         let copilotName = document.querySelector("input[name=copilotName]");
-//         let fuelLevel = document.querySelector("input[name=fuelLevel]");
-//         let cargoMass = document.querySelector("input[name=cargoMass");
-//             if (pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === "") {
-//                 alert("All fields are required!");
-//             }
-//             else if (pilotName.value != "text") {
-//                 alert("Empty");
-//             }
-//             else if (copilotName.value != "text") {
-//                 alert("Empty");
-//             }
-//             else if (isNaN(fuelLevel.value)=true) {
-//                 alert("Not a Number");
-//             }
-//             else if (isNaN(cargoMass.value)=true) {
-//                 alert("Not a Number");
-//             }
-//         // stop the form submission
-//             event.preventDefault();
-//         });
-//     });
-// }
 
 
 
@@ -121,7 +92,6 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
             launchStatus.innerHTML = "Shuttle is Ready for Launch"
             launchStatus.setAttribute('style', "color:green");
         }
-    //});
 };
  
  async function myFetch() {
