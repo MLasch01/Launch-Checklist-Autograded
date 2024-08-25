@@ -81,7 +81,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
         
         if(fuelLevel < 10000) {
-            values.setAttribute('style', "visibility: visible");
+            list.style.visibility = "visible";;
             launchStatus.innerHTML = "Shuttle Not Ready for Launch"
             launchStatus.setAttribute('style', "color:red");
             fuelStatus.innerHTML = "Fuel level too low for launch"
@@ -90,7 +90,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         }
 
         if(cargoLevel > 10000) {
-            values.setAttribute('style', "visibility: visible");
+            list.style.visibility = "visible";;
             launchStatus.innerHTML = "Shuttle Not Ready for Launch"
             launchStatus.setAttribute('style', "color:red");
             cargoStatus.innerHTML = "Cargo mass too heavy for launch"            
