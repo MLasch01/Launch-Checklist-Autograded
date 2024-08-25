@@ -22,6 +22,7 @@ window.addEventListener("load", function() {
 
         let form = document.getElementById("launchForm");
         let list = document.getElementById("faultyItems");
+        
 
          // Below this comment call the appropriate helper functions to pick a planet from the list of planets 
          // and add that information to your destination.
