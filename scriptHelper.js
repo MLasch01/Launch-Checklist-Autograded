@@ -80,8 +80,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
         
-        if(fuelLevel < 10000) {
-            list.style.visibility = "visible";;
+        if(validateInput(fuelLevel) != "Empty" && fuelLevel < 10000) {
+            list.style.visibility = "visible";
             launchStatus.innerHTML = "Shuttle Not Ready for Launch"
             launchStatus.setAttribute('style', "color:red");
             fuelStatus.innerHTML = "Fuel level too low for launch"
@@ -89,8 +89,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
             fuelStatus.innerHTML = `Fuel level high enough for launch`;
         }
 
-        if(cargoLevel > 10000) {
-            list.style.visibility = "visible";;
+        if(validateInput(cargoLevel) != "Empty" && cargoLevel > 10000) {
+            list.style.visibility = "visible";
             launchStatus.innerHTML = "Shuttle Not Ready for Launch"
             launchStatus.setAttribute('style', "color:red");
             cargoStatus.innerHTML = "Cargo mass too heavy for launch"            
@@ -98,7 +98,9 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
             cargoStatus.innerHTML = `Cargo mass low enough for launch`;
         }
         
-        if (fuelLevel >= 10000 & cargoLevel <= 10000) {
+        if (fuelLevel >= 10000 && cargoLevel <= 10000 && validateInput(pilot) ==  "Not a Number" 
+                && validateInput(copilot) == "Not a Number" && 
+                validateInput(fuelLevel) != "Empty" && validateInput(cargoLevel) != "Empty") {
             launchStatus.innerHTML = "Shuttle is Ready for Launch"
             launchStatus.setAttribute('style', "color:green");
         }
